@@ -409,17 +409,17 @@ function UploadCard({
     event.target.value = "";
   };
 
-  const handleDragOver = (event: DragEvent<HTMLDivElement>) => {
+  const handleDragOver = (event: DragEvent<HTMLElement>) => {
     event.preventDefault();
     if (!isDragging) setIsDragging(true);
   };
 
-  const handleDragLeave = (event: DragEvent<HTMLDivElement>) => {
+  const handleDragLeave = (event: DragEvent<HTMLElement>) => {
     event.preventDefault();
     setIsDragging(false);
   };
 
-  const handleDrop = (event: DragEvent<HTMLDivElement>) => {
+  const handleDrop = (event: DragEvent<HTMLElement>) => {
     event.preventDefault();
     setIsDragging(false);
     const file = event.dataTransfer.files?.[0];
